@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Week 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script>
+        /*
+            DOM
+            function getAnimalData(){
+                fetch("https://fakerapi.it/api/v1/persons")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                })
+            }        
+        */
+
+        async function getAnimalData(){
+            //axios
+            let response = await fetch("https://fakerapi.it/api/v1/persons");
+            let data = await response.json();
+            console.log(data);
+        }
+
+    //     function getAnimals() {
+    //   fetch("https://fakerapi.it/api/v1/persons")
+    //     .then(async function(response) {
+    //       const jsonData = await response.json();
+    //       document.getElementById("container").innerHTML = JSON.stringify(jsonData.data);
+    //     })
+    // }
+
+    </script>
+    <button onclick="getAnimalData()">Get Animal Data</button>
+</body>
+</html>
